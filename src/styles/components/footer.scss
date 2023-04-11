@@ -1,0 +1,61 @@
+.footer {
+  background-color: $footer-color;
+  padding: 56px 16px 56px;
+
+  @include tablet-min {
+    padding: 88px 44px 88px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 48px;
+  }
+
+  @include desktop-min {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 48px;
+  }
+
+  @include desktop-max {
+    padding: 88px 124px 88px 124px;
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 48px;
+  }
+
+  &-list {
+    margin: 40px 0 64px;
+    @include tablet-min {
+      margin: 90px 0 0;
+    }
+    padding: 0;
+    list-style: none;
+    @include desktop-min {
+      margin-top: 55px;
+    }
+  }
+  &-title {
+    padding: 0 0 16px 0;
+  }
+  &-item {
+    padding-bottom: 16px;
+    &:last-child {
+      padding-bottom: 0px;
+    }
+  }
+
+  &-navigation__wrapper {
+    @include tablet-min {
+      width: 328px;
+    }
+    @include desktop-min {
+      width: 328px;
+    }
+    @include desktop-max {
+      width: 584px;
+    }
+  }
+}

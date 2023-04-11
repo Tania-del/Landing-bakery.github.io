@@ -1,0 +1,42 @@
+.learn-more {
+  width: 288px;
+  height: 56px;
+
+  @include desktop-min {
+    padding-top: 64px;
+  }
+
+  &__button {
+    gap: 6px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $secondary-color;
+    border-radius: 32px;
+    background-color: $primary-color;
+    align-items: center;
+    justify-content: center;
+  }
+  &__text {
+    color: $secondary-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  @include tablet-min {
+    width: 326px;
+
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 243px;
+    }
+  }
+  &__notvisible {
+    @include desktop-min {
+      display: none;
+    }
+  }
+}

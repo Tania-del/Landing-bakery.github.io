@@ -1,0 +1,67 @@
+
+.drawer {
+  &-active {
+    @include desktop-min {
+      color: $secondary-color;
+    }
+  }
+  @include tablet-max {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100vh;
+    background-color: $primary-color;
+    transition: 0.3s ease-in-out;
+    transform: translateX(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0%;
+    overflow: hidden;
+  }
+
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    @include desktop-min {
+      display: flex;
+      gap: 64px;
+    }
+  }
+
+  &-item {
+    padding-bottom: 24px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+
+    &:last-child {
+      padding-bottom: 0px;
+    }
+
+    @include desktop-min {
+      padding: 0;
+    }
+  }
+
+  &-contact__item {
+    color: $secondary-color;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  &-wrapper__item {
+    display: flex;
+    gap: 7px;
+  }
+
+  &.active {
+    transform: translateX(0);
+    width: 100%;
+    z-index: 1;
+  }
+}
+

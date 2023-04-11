@@ -1,0 +1,53 @@
+
+.header {
+  &-container {
+    @include desktop-min {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 28px 32px 28px 32px;
+    }
+  }
+  &-logo {
+    z-index: 2;
+  }
+
+  .header-logo {
+    margin: 0;
+    width: 136px;
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  @include tablet-max {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px;
+
+    &-button {
+      position: relative;
+      z-index: 2;
+      width: 24px;
+      height: 24px;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      &[aria-expanded="true"] > .menu {
+        display: none;
+      }
+      &[aria-expanded="false"] > .close {
+        display: none;
+      }
+    }
+
+    &__icon-menu {
+      pointer-events: none;
+    }
+  }
+  @include desktop-min {
+    &-button {
+      display: none;
+    }
+  }
+}

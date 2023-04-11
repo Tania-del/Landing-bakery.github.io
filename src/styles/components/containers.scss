@@ -1,0 +1,28 @@
+.container {
+  padding: 16px;
+
+  @include tablet-min {
+    padding: 44px;
+  }
+
+  @include desktop-min {
+    padding: 44px;
+  }
+
+  @include desktop-max {
+    padding: 44px 124px 0px 124px;
+  }
+}
+
+.card-container {
+  @include tablet-min {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+  }
+  @include desktop-min {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+  }
+}
