@@ -1,10 +1,10 @@
 .contact {
   &-list {
     list-style: none;
-    padding: 0px;
-    margin: 40px 0px;
+    padding: 0;
+    margin: 40px 0;
     @include tablet-min {
-      margin: 38px 0 38px;
+      margin: 38px 0;
     }
     @include desktop-min {
       width: 260px;
@@ -29,12 +29,12 @@
   }
 
   &-email {
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 16px;
   }
   &-wrapper {
     @include mobile-max {
-      padding: 40px 0px 40px;
+      padding: 40px 0;
     }
 
     display: flex;

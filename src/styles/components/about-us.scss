@@ -16,7 +16,7 @@
     padding: 32px 0 64px;
     @include tablet-min {
       width: 328px;
-      padding: 0px;
+      padding: 0;
     }
     @include desktop-min {
       color: $black-color;
